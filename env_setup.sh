@@ -6,7 +6,7 @@ else
     conda create -n $env Python=3.10
 fi
 conda activate $env
-pip install tensorflow[and-cuda] pandas pillow matplotlib basicsr facexlib gfpgan --no-cache-dir
+pip install tensorflow[and-cuda] pandas pillow matplotlib basicsr facexlib gfpgan --no-cache-dir --no-input
 conda deactivate
 
 # RT4KSR
@@ -17,9 +17,9 @@ else
     conda create -n $env Python=3.10
 fi
 conda activate $env
-conda install pytorch torchvision pytorch-cuda -c pytorch -c nvidia --no-cache-dir
+conda install pytorch torchvision pytorch-cuda -c pytorch -c nvidia
 cd RT4KSR
-    pip install -r requirements.txt 
+    pip install -r requirements.txt  --no-input
 cd -
 conda deactivate
 
@@ -31,9 +31,9 @@ else
     conda create -n $env Python=3.7
 fi
 conda activate $env
-pip install tensorflow[and-cuda] basicsr facexlib gfpgan
+pip install tensorflow[and-cuda] basicsr facexlib gfpgan  --no-input
 cd Real-ESRGAN 
-    pip install -r requirements.txt --no-cache-dir
+    pip install -r requirements.txt --no-cache-dir --no-input
     python setup.py develop 
 cd -
 conda deactivate

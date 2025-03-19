@@ -3,12 +3,18 @@
 ## Требования
 - Дистрибутив Linux или Windows с интеграцией WSL2 (протестировано на Ubuntu 22.04).
 - Anaconda
-- TensorRT SDK
+- Cuda Toolkit
 ## Установка
+Убедиться, что установлены  `curl` и `bsdtar`:
+```shell
+which curl
+which bsdtar
+```
 Загрузить наборы данных и репозитории:
 ```shell
 source load_proj.sh
 ```
+Убедиться, что появилась директория `datasets/` с наборами данных внутри.
 Поднять окружение:
 ```shell
 source env_setup.sh

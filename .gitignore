@@ -1,0 +1,6 @@
+*
+!**/README.md
+!.gitignore
+!infer.sh
+!env_setup.sh
+!.sh
